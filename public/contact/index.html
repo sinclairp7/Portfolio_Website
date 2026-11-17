@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Payton Sinclair</title>
-  <meta name="description" content="Contact Information for Payton Sinclair. Coming soon.">
-  <meta name="robots" content="noindex"> <!-- remove this line when the page is finished -->
+  <meta name="description" content="Contact Payton Sinclair: email, LinkedIn, and GitHub.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
@@ -22,12 +21,57 @@
     </nav>
   </header>
 
-  <main class="construction">
-    <h1>LOADING <span class="spinner" aria-hidden="true">-</span></h1>
-    <p class="construction-note">Under Construction</p>
-    <a class="btn" href="/">&#9664; MAIN MENU</a>
+  <main class="contact">
+    <section class="guild">
+      <h1>THE ADVENTURERS' GUILD</h1>
+
+      <!-- Guild keeper dialogue utilizing dialogue.js for typewriter effect -->
+      <div class="dialogue-row">
+        <div class="dialogue">
+          <p class="speaker">GUILD KEEPER</p>
+          <div class="dialogue-text">
+            <p>Halt, traveler! No one takes on a quest alone. You'll need a party first, and I have a just the recruit for you.</p>
+            <p>A promising adventurer fresh off of the Cyber Operations front lines. He is certified, and always tinkering in his homelab dungeon. A formidable companion for any quest!</p>
+            <p>Pin your message to the board below to recruit them.</p>
+          </div>
+        </div>
+        <button type="button" class="skip-btn">SKIP &#9654;&#9654;</button>
+      </div>
+
+      <!-- Quest board with contact links -->
+      <div class="board">
+        <h2 class="board-title">WANTED: PARTY MEMBER</h2>
+        <p class="board-sub">Cybersecurity &amp; IT &bull; Entry level &bull; Phoenix &amp; remote</p>
+
+        <ul class="notices">
+          <li>
+            <a class="notice" href="mailto:contact@paytonsinclair.com">
+              <span class="notice-title">Send a Raven</span>
+              <span class="notice-label">Email</span>
+              <span class="notice-detail">contact@paytonsinclair.com</span>
+            </a>
+          </li>
+          <li>
+            <a class="notice" href="https://www.linkedin.com/in/paytonsinclair" rel="me noopener">
+              <span class="notice-title">Guild Registry</span>
+              <span class="notice-label">LinkedIn</span>
+              <span class="notice-detail">linkedin.com/in/paytonsinclair</span>
+            </a>
+          </li>
+          <li>
+            <a class="notice" href="https://github.com/sinclairp7" rel="me noopener">
+              <span class="notice-title">Spellbook</span>
+              <span class="notice-label">GitHub</span>
+              <span class="notice-detail">github.com/sinclairp7</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="btn" href="/">&#9664; MAIN MENU</a>
+    </section>
   </main>
 
-  <script src="/construction.js" defer></script>
+  <script src="/dialogue.js" defer></script>
 </body>
 </html>
