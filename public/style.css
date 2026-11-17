@@ -60,3 +60,104 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .cursor { animation: none; }
 }
+
+/* ---------- Shared menu bar ---------- */
+body.page {
+  display: block;
+  place-items: initial;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+.topnav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.topnav a:hover,
+.topnav a:focus,
+.topnav a[aria-current="page"] {
+  color: var(--highlight);
+}
+
+/* ---------- Arcade credits ---------- */
+
+/* Default: a normal scrollable window */
+.credits-wrap {
+  height: 70vh;
+  max-width: 700px;
+  margin: 1rem auto;
+  overflow-y: auto;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px var(--accent);
+}
+
+.credits-wrap {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* old Edge */
+}
+
+.credits-wrap::-webkit-scrollbar {
+  display: none;              /* Chrome, Brave, Safari */
+}
+
+.credits-wrap:focus-visible {
+  outline: 4px solid var(--highlight);
+  outline-offset: 6px;
+}
+
+.credits {
+  padding: 1rem;
+}
+
+/* Rolling mode, switched on by the button */
+.credits-wrap.rolling {
+  overflow: hidden;
+}
+
+.credits-wrap.rolling .credits {
+  padding: 70vh 1rem;
+  animation: roll 60s linear infinite;
+}
+
+.credits-wrap.rolling:hover .credits {
+  animation-play-state: paused;
+}
+
+@keyframes roll {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+/* The button */
+.roll-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem 1rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.7rem;
+  color: var(--bg);
+  background: var(--accent);
+  border: 4px solid var(--accent);
+  cursor: pointer;
+}
+
+.roll-btn:hover,
+.roll-btn:focus-visible {
+  background: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.hint {
+  text-align: center;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.6rem;
+  color: var(--highlight);
+}
