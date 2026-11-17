@@ -123,8 +123,8 @@ body.page {
 }
 
 .credits-wrap.rolling .credits {
-  padding: 70vh 1rem;
-  animation: roll 60s linear infinite;
+  padding: 70vh 1rem 0;
+  animation: roll 45s linear infinite;
 }
 
 .credits-wrap.rolling:hover .credits {
