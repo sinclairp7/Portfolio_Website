@@ -4,14 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume | Payton Sinclair</title>
-  <meta name="description" content="Resume of Payton Sinclair. Coming soon.">
-  <meta name="robots" content="noindex"> <!-- remove this line when the page is finished -->
+  <meta name="description" content="Resume of Payton Sinclair: SOC analyst experience, certifications, and education.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="page">
+
+  <!-- All pixel icon sprites -->
+  <svg class="sprite-sheet" aria-hidden="true" focusable="false">
+    <!-- Shield emblem for the portrait -->
+    <symbol id="px-shield" viewBox="0 0 12 12">
+      <rect x="1" y="0" width="10" height="1" fill="#2ea862"/>
+      <rect x="0" y="1" width="12" height="5" fill="#2ea862"/>
+      <rect x="1" y="6" width="10" height="2" fill="#2ea862"/>
+      <rect x="2" y="8" width="8" height="1" fill="#2ea862"/>
+      <rect x="3" y="9" width="6" height="1" fill="#2ea862"/>
+      <rect x="4" y="10" width="4" height="1" fill="#2ea862"/>
+      <rect x="5" y="11" width="2" height="1" fill="#2ea862"/>
+      <rect x="5" y="2" width="2" height="1" fill="#0b0f1a"/>
+      <rect x="4" y="3" width="4" height="2" fill="#0b0f1a"/>
+      <rect x="5" y="5" width="2" height="3" fill="#0b0f1a"/>
+    </symbol>
+
+    <!-- Broadsword for the quests section -->
+    <symbol id="px-sword" viewBox="0 0 13 13">
+      <rect x="6" y="0" width="1" height="1" fill="#0b0f1a"/>
+      <rect x="5" y="1" width="3" height="7" fill="#0b0f1a"/>
+      <rect x="6" y="1" width="1" height="6" fill="#e8d5b0"/>
+      <rect x="2" y="8" width="9" height="1" fill="#0b0f1a"/>
+      <rect x="6" y="8" width="1" height="1" fill="#e8d5b0"/>
+      <rect x="2" y="9" width="1" height="1" fill="#0b0f1a"/>
+      <rect x="10" y="9" width="1" height="1" fill="#0b0f1a"/>
+      <rect x="6" y="9" width="1" height="3" fill="#0b0f1a"/>
+      <rect x="5" y="12" width="3" height="1" fill="#0b0f1a"/>
+    </symbol>
+
+    <!-- Forging hammer for the certifications section -->
+    <symbol id="px-hammer" viewBox="0 0 13 13">
+      <rect x="2" y="1" width="9" height="4" fill="#0b0f1a"/>
+      <rect x="1" y="2" width="1" height="2" fill="#0b0f1a"/>
+      <rect x="11" y="2" width="1" height="2" fill="#0b0f1a"/>
+      <rect x="3" y="2" width="7" height="1" fill="#e8d5b0"/>
+      <rect x="5" y="5" width="3" height="8" fill="#0b0f1a"/>
+      <rect x="6" y="5" width="1" height="6" fill="#e8d5b0"/>
+    </symbol>
+
+    <!-- Closed book for the training section -->
+    <symbol id="px-book" viewBox="0 0 13 13">
+      <rect x="2" y="1" width="9" height="11" fill="#0b0f1a"/>
+      <rect x="4" y="1" width="1" height="11" fill="#e8d5b0"/>
+      <rect x="6" y="3" width="3" height="1" fill="#e8d5b0"/>
+      <rect x="6" y="5" width="3" height="1" fill="#e8d5b0"/>
+      <rect x="10" y="2" width="1" height="9" fill="#e8d5b0"/>
+    </symbol>
+  </svg>
+
   <header>
     <nav class="topnav" aria-label="Main">
       <a href="/">Home</a>
@@ -22,12 +71,127 @@
     </nav>
   </header>
 
-  <main class="construction">
-    <h1>LOADING <span class="spinner" aria-hidden="true">-</span></h1>
-    <p class="construction-note">Under Construction</p>
-    <a class="btn" href="/">&#9664; MAIN MENU</a>
-  </main>
+  <main class="resume">
+    <!-- Plain resume options come first -->
+    <div class="resume-actions">
+      <a class="btn" href="/Payton-Sinclair-Public-Resume.pdf" target="_blank" rel="noopener">VIEW RESUME</a>
+      <a class="btn" href="/Payton-Sinclair-Public-Resume.pdf" download>DOWNLOAD PDF</a>
+    </div>
 
-  <script src="/construction.js" defer></script>
+    <!-- Complete adventurer card layout -->
+    <article class="card" aria-labelledby="card-name">
+      <div class="card-head">
+        <span>ADVENTURERS' GUILD &middot; MEMBER CARD</span>
+        <span>No. 1337</span>
+      </div>
+
+      <div class="card-id">
+        <div class="portrait">
+             <svg viewBox="0 0 12 12" shape-rendering="crispEdges" role="img" aria-label="Pixel shield emblem"><use href="#px-shield"/></svg>
+        </div>
+
+        <div class="card-info">
+          <h1 id="card-name">PAYTON SINCLAIR</h1>
+          <dl>
+            <div><dt>Class</dt><dd>SOC Analyst</dd></div>
+            <div><dt>Rank</dt><dd>Recruit</dd></div>
+            <div><dt>Base</dt><dd>Phoenix, AZ</dd></div>
+            <div><dt>Status</dt><dd><span class="dot" aria-hidden="true">&#9679;</span> Seeking a party</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <ul class="card-stats">
+        <li><span class="stat-num">2</span>Degrees</li>
+        <li><span class="stat-num">3</span>Certifications</li>
+        <li><span class="stat-num">2</span>Quests</li>
+      </ul>
+
+            <section class="achievements" aria-labelledby="ach-title">
+        <h2 id="ach-title">ACHIEVEMENTS UNLOCKED</h2>
+
+        <h3>--- Quests Completed ---</h3>
+        <ul class="ach-list">
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-sword"/></svg></span>
+            <span class="ach-body">
+              <span class="ach-title">SOC Analyst Intern</span>
+              <span class="ach-detail">Arizona Department of Homeland Security</span>
+              <span class="ach-note">Triaged alerts and hunted threats in the SIEM.</span>
+            </span>
+            <span class="ach-year">2026</span>
+          </li>
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-sword"/></svg></span>
+            <span class="ach-body">
+              <span class="ach-title">IT Intern</span>
+              <span class="ach-detail">Arizona Department of Corrections</span>
+              <span class="ach-note">Led a port billing audit that saved the state $240K a year.</span>
+            </span>
+            <span class="ach-year">2024&ndash;25</span>
+          </li>
+        </ul>
+
+        <h3>--- Certifications ---</h3>
+        <ul class="ach-list">
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-hammer"/></svg></span>
+            <span class="ach-body"><span class="ach-title">CompTIA Security+</span></span>
+            <span class="ach-year">2026</span>
+          </li>
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-hammer"/></svg></span>
+            <span class="ach-body"><span class="ach-title">Qualys Vulnerability Management</span></span>
+            <span class="ach-year">2025</span>
+          </li>
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-hammer"/></svg></span>
+            <span class="ach-body"><span class="ach-title">FEMA NIMS ICS-100</span></span>
+            <span class="ach-year">2025</span>
+          </li>
+        </ul>
+
+        <h3>--- Training ---</h3>
+        <ul class="ach-list">
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-book"/></svg></span>
+            <span class="ach-body">
+              <span class="ach-title">B.S. Cyber Operations</span>
+              <span class="ach-detail">University of Arizona &middot; Engineering emphasis</span>
+            </span>
+            <span class="ach-year">2026</span>
+          </li>
+          <li class="ach">
+            <span class="ach-icon" aria-hidden="true"><svg viewBox="0 0 13 13" shape-rendering="crispEdges"><use href="#px-book"/></svg></span>
+            <span class="ach-body">
+              <span class="ach-title">A.A.S. Cyber Engineering</span>
+              <span class="ach-detail">Paradise Valley Community College</span>
+            </span>
+            <span class="ach-year">2024</span>
+          </li>
+        </ul>
+
+        <h3>--- Abilities ---</h3>
+        <ul class="skills">
+          <li>CrowdStrike EDR</li>
+          <li>Elastic</li>
+          <li>Splunk</li>
+          <li>Qualys</li>
+          <li>Linux</li>
+          <li>Proxmox</li>
+          <li>Active Directory</li>
+          <li>Microsoft 365 &amp; Entra</li>
+          <li>Incident Response</li>
+          <li>Threat Hunting</li>
+          <li>Threat Intelligence</li>
+          <li>Digital Forensics</li>
+        </ul>
+      </section>
+
+      <div class="card-foot">
+        <a class="btn" href="/contact/">&#9654; RECRUIT THIS ADVENTURER</a>
+      </div>
+    </article>
+  </main>
 </body>
 </html>

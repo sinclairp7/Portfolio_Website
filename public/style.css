@@ -6,6 +6,11 @@
   --orange: #c1660c;
   --orange-dark: #633311;
   --parchment: #ffe8c7;
+  --orange-light: #ffb066;
+  --accent-dim: #2ea862;
+  --btn-bg: #14ad5f;
+  --btn-border: #0e8f4d;
+  --btn-text: #e4f5e8;
 }
 
 * { box-sizing: border-box; }
@@ -98,6 +103,17 @@ body.page {
   box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px var(--accent);
 }
 
+.credits h2 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.9rem;
+  color: var(--highlight);
+  margin: 3rem 0 1rem;
+}
+
+.credits p { margin: 0.4rem 0; }
+.credits .role { color: var(--highlight); }
+.credits .end { margin-top: 3rem; }
+
 .credits-wrap {
   scrollbar-width: none;      /* Firefox */
   -ms-overflow-style: none;   /* old Edge */
@@ -142,14 +158,15 @@ body.page {
   padding: 0.75rem 1rem;
   font-family: "Press Start 2P", monospace;
   font-size: 0.7rem;
-  color: var(--bg);
-  background: var(--accent);
-  border: 4px solid var(--accent);
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  border: 4px solid var(--btn-border);
   cursor: pointer;
 }
 
 .roll-btn:hover,
 .roll-btn:focus-visible {
+  color: var(--bg);
   background: var(--highlight);
   border-color: var(--highlight);
 }
@@ -198,13 +215,14 @@ body.page {
   font-family: "Press Start 2P", monospace;
   font-size: 0.7rem;
   text-decoration: none;
-  color: var(--bg);
-  background: var(--accent);
-  border: 4px solid var(--accent);
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  border: 4px solid var(--btn-border);
 }
 
 .btn:hover,
 .btn:focus-visible {
+  color: var(--bg);
   background: var(--highlight);
   border-color: var(--highlight);
 }
@@ -243,7 +261,7 @@ body.page {
   margin: 0 0 0.5rem;
   font-family: "Press Start 2P", monospace;
   font-size: 0.7rem;
-  color: var(--orange);
+  color: var(--orange-light);
 }
 
 .dialogue-text p { margin: 0 0 0.5rem; }
@@ -254,7 +272,7 @@ body.page {
   padding: 0.5rem 0.75rem;
   font-family: "Press Start 2P", monospace;
   font-size: 0.6rem;
-  color: var(--orange);
+  color: var(--orange-light);
   background: transparent;
   border: 3px solid var(--orange);
   cursor: pointer;
@@ -280,7 +298,7 @@ body.page {
   margin: 0;
   font-family: "Press Start 2P", monospace;
   font-size: 0.9rem;
-  color: var(--orange);
+  color: var(--accent);
 }
 
 .board-sub { margin: 0.5rem 0 1.5rem; }
@@ -314,7 +332,7 @@ body.page {
 .notice-title {
   font-family: "Press Start 2P", monospace;
   font-size: 0.65rem;
-  color: var(--orange);
+  color: var(--orange-light);
 }
 
 .notice-label { font-size: 1.6rem; }
@@ -338,8 +356,199 @@ body.page {
   border: 0;
 }
 
-/* Phones: skip button moves under the dialogue */
+/* Skip button moves under the dialogue */
 @media (max-width: 600px) {
   .dialogue-row { flex-direction: column; align-items: stretch; }
   .skip-btn { align-self: flex-end; }
+}
+
+/* The adventurer card resume */
+.resume { padding: 2rem 1rem; }
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume-actions .btn { margin-top: 0; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--parchment);
+  background: var(--orange-dark);
+  border: 4px solid var(--orange);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px var(--accent);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.6rem;
+  color: var(--parchment);
+  text-shadow: 2px 2px 0 var(--orange-dark);
+  background: var(--orange);
+}
+
+/* Portrait and identity */
+.card-id {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 3px dashed var(--orange);
+}
+
+.portrait {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 128px;
+  height: 128px;
+  background: var(--bg);
+  border: 4px solid var(--orange);
+}
+
+.portrait svg { width: 84px; height: 84px; }
+
+.card-info h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.card-info dl { margin: 0; }
+.card-info dl div { display: flex; gap: 0.75rem; }
+.card-info dt { min-width: 4.5rem; color: var(--orange-light); }
+.card-info dt::after { content: ":"; }
+.card-info dd { margin: 0; }
+.dot { color: var(--accent); }
+
+/* Stats strip */
+.card-stats {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  border-bottom: 3px dashed var(--orange);
+}
+
+.stat-num {
+  margin-right: 0.5rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* Achievements menu */
+.achievements { padding: 1.5rem 1.25rem; }
+
+.achievements h2 {
+  margin: 0;
+  text-align: center;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.achievements h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange-light);
+}
+
+.ach-icon svg { width: 39px; height: 39px; }
+
+.sprite-sheet {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.ach-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.ach {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--orange);
+}
+
+.ach-icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  color: var(--bg);
+  background: var(--accent-dim);
+}
+
+.ach-title,
+.ach-detail,
+.ach-note { display: block; }
+
+.ach-detail { font-size: 1.1rem; opacity: 0.85; }
+.ach-note { font-size: 1.1rem; color: var(--orange-light); }
+
+.ach-year {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.6rem;
+  white-space: nowrap;
+  color: var(--orange-light);
+}
+
+/* Ability tags */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills li {
+  padding: 0.15rem 0.6rem;
+  font-size: 1.2rem;
+  color: var(--text);
+  border: 2px solid var(--orange);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.card-foot {
+  padding: 0 1.25rem 1.5rem;
+  text-align: center;
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .card-head { flex-direction: column; align-items: center; }
+  .card-id { flex-direction: column; text-align: center; }
+  .card-info dl div { justify-content: center; }
+  .ach { grid-template-columns: 3rem 1fr; }
+  .ach-year { grid-column: 2; }
 }
